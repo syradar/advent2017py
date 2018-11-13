@@ -20,9 +20,10 @@ For example:
 '12131415' produces 4.
 What is the solution to your new captcha?
 """
+import sytools
 
 def sum_pairs(digits):
-    _digits = list(map(int, digits))
+    _digits = sytools.list_str_to_int(digits)
     total = 0
 
     for current, next in zip(_digits, _digits[1:]):
@@ -35,7 +36,7 @@ def sum_pairs(digits):
     return total
 
 def sum_sandwich(digits):
-    _digits = list(map(int, digits))
+    _digits = sytools.list_str_to_int(digits)
     halfway = int(len(_digits) / 2)
     total = 0
     
