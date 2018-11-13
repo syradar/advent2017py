@@ -60,16 +60,11 @@ if __name__ == "__main__":
 7	5	3
 2	4	6	8""" )
     assert calc_checksum(test_input, get_difference) == 18
-    print(calc_checksum(input, get_difference))
+    print(f"Difference Checksum: {calc_checksum(input, get_difference)}")
 
     test_input2 = string_to_2dlist("""5	9	2	8
 9	4	7	3
 3	8	6	5""" )
-
-    print(test_input2)
-
     assert calc_checksum(test_input2, get_even_divisible) == 9
-    print(calc_checksum(test_input2, get_even_divisible))
     
-    print(calc_checksum(input, get_even_divisible))
-
+    print(f"Even Divisible Checksum: {calc_checksum(input, get_even_divisible)}")
