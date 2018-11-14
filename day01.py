@@ -22,26 +22,26 @@ What is the solution to your new captcha?
 """
 import sytools
 
-def sum_pairs(digits):
-    _digits = sytools.list_str_to_int(digits)
+def sum_pairs(_digits):
+    digits = sytools.list_str_to_int(_digits)
     total = 0
 
-    for current, next in zip(_digits, _digits[1:]):
+    for current, next in zip(digits, digits[1:]):
         if current is next:
             total = total + current
 
-    if(int(_digits[0]) == int(_digits[-1])):
-        total = total + _digits[0]
+    if(int(digits[0]) == int(digits[-1])):
+        total = total + digits[0]
 
     return total
 
-def sum_sandwich(digits):
-    _digits = sytools.list_str_to_int(digits)
-    halfway = int(len(_digits) / 2)
+def sum_sandwich(_digits):
+    digits = sytools.list_str_to_int(_digits)
+    halfway = int(len(digits) / 2)
     total = 0
     
-    for index, current in enumerate(_digits):
-        next = _digits[(index + halfway) % len(_digits)]
+    for index, current in enumerate(digits):
+        next = digits[(index + halfway) % len(digits)]
         if current is next:
             total = total + current
     

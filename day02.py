@@ -18,15 +18,15 @@ What is the checksum for the spreadsheet in your puzzle input?
 import sytools
 import itertools
 
-def get_difference(digits):
-    _digits = sytools.list_str_to_int(digits)
-    max_digit = max(_digits)
-    min_digit = min(_digits)
+def get_difference(_digits):
+    digits = sytools.list_str_to_int(_digits)
+    max_digit = max(digits)
+    min_digit = min(digits)
     return int(max_digit - min_digit)
 
-def get_even_divisible(digits):
-    _digits = sytools.list_str_to_int(digits)
-    for dividend, denominator in itertools.permutations(_digits, 2):
+def get_even_divisible(_digits):
+    digits = sytools.list_str_to_int(_digits)
+    for dividend, denominator in itertools.permutations(digits, 2):
         if dividend % denominator == 0:
             return int(dividend / denominator)
 
